@@ -2,7 +2,7 @@
 
 ## Author
 - **Name:** Catherine Nduku
-- **GitHub:** [Ndush-gif](https://github.com/Ndush-gif))
+- **GitHub:** [Ndush-gif](https://github.com/Ndush-gif)
 - **Date:** Month Day, Year
 
 ## Project Description
@@ -30,14 +30,6 @@ What did you learn while building this project?
 
 ## Challenges Faced
 What problems did you encounter and how did you solve them?
-
-## Collaboration (required in Weeks 0, 3 and 7; omit on other solo weeks)
-- **Team / partner:** [@partner](https://github.com/partner)
-- **Shared repo:** https://github.com/...
-- **PR I opened:** https://github.com/.../pull/N
-- **PR I reviewed:** https://github.com/.../pull/N
-- **Merge conflict I resolved** (Weeks 0 and 3): https://github.com/.../pull/N
-(Collaboration happens outside this repository. It is marked **only** from these links — the marker does not search the shared repo for your work. Every link must point to something authored by your own GitHub account.)
 
 ## Screenshots (optional)
 ![Screenshot description](path/to/screenshot.png)
