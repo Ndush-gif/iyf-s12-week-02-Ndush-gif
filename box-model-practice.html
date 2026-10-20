@@ -4,13 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Box Model Practice</title>
-  
+  <style>
+    /* This box ends up 340px wide - why? Fix it! */
+    /* Fixed */
+.broken-box {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 30px;
+    border: none;
+    background-color: lightcoral;
+}
+  </style>
   </head>
   <body>
-   
+
     <main>
-    
+      <div class="broken-box">I should be 300px wide in total</div>
     </main>
-  
+
   </body>
 </html>
