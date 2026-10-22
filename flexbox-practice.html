@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .card-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .flex-card {
+            flex: 1 1 250px;
+            padding: 1.5rem;
+            border: 1px solid var(--color-muted);
+            border-radius: 8px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Flexbox Practice</h1>
+
+        <h2>Exercise 2: Card Row</h2>
+        <div class="card-row">
+            <div class="flex-card">
+                <h3>Crocheting</h3>
+                <p>I make handmade pieces to relax and practice patience.</p>
+            </div>
+            <div class="flex-card">
+                <h3>Web Development</h3>
+                <p>I'm learning HTML and CSS to build my own portfolio website, one lesson at a time, and this card has more text than the others on purpose.</p>
+            </div>
+            <div class="flex-card">
+                <h3>Reading</h3>
+                <p>I like learning new things from books.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

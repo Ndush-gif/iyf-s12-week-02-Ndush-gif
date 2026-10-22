@@ -77,4 +77,32 @@ button {
 button:hover {
     background-color: var(--color-primary-dark);
 }
+/* Navigation bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: var(--color-primary-dark);
+}
 
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: var(--color-primary-light);
+}
+
+.logo {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: var(--font-xl);
+    font-weight: 700;
+}
