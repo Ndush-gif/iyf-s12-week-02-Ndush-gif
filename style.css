@@ -187,3 +187,136 @@ button:hover {
         grid-template-columns: repeat(3, 1fr);
     }
 }
+/* Contact page - mobile first: single column, full-width form */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.contact-form fieldset {
+    min-width: 0;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--color-muted);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.contact-form legend {
+    padding: 0 0.5rem;
+    font-weight: 600;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
+.contact-form .inline-label {
+    display: inline;
+    font-weight: 400;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--color-muted);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: var(--font-base);
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: var(--font-base);
+}
+
+.contact-sidebar {
+    padding: 1.5rem;
+    border: 1px solid var(--color-muted);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.contact-sidebar ul {
+    margin-bottom: 1rem;
+}
+
+/* Tablet: the submit button no longer needs the full width */
+@media (min-width: 768px) {
+    .contact-form button {
+        width: auto;
+    }
+}
+
+/* Desktop: form on the left, sidebar on the right */
+@media (min-width: 1024px) {
+    .contact-layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
+    }
+}
+/* ===== Task 4.4: Polish ===== */
+
+/* 1. Responsive images everywhere */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 2. Transitions (smooth hover changes) */
+a,
+button {
+    transition: color 0.3s ease, background-color 0.3s ease,
+                transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card,
+.flex-card,
+.project-card,
+.contact-sidebar {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* 3. Hover states */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover,
+.flex-card:hover,
+.project-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 4. Focus states (keyboard accessibility) */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Dark backgrounds need a light outline to be visible */
+.navbar a:focus,
+.site-footer a:focus,
+.mag-header a:focus {
+    outline-color: white;
+}
+
+/* Respect people who turn animations off in their system settings */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
