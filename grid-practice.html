@@ -21,6 +21,43 @@
             object-fit: cover;
             display: block;
         }
+        .magazine {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.mag-header,
+.mag-footer {
+    grid-column: 1 / -1;
+    padding: 1rem;
+    background-color: var(--color-primary-dark);
+    color: white;
+}
+
+.mag-header h3 {
+    color: white;
+    margin-bottom: 0.25rem;
+}
+
+.mag-sidebar {
+    padding: 1rem;
+    background-color: var(--color-primary-light);
+}
+
+.mag-sidebar ul {
+    list-style: none;
+}
+
+.mag-content {
+    padding: 1rem;
+    background-color: white;
+}
+.mag-header p,
+.mag-footer p {
+    margin-bottom: 0;
+}
     </style>
 </head>
 <body>
@@ -36,6 +73,32 @@
             <img src="https://placehold.co/400x300?text=Image+5" alt="Gallery placeholder 5">
             <img src="https://placehold.co/400x300?text=Image+6" alt="Gallery placeholder 6">
         </div>
+        <h2>Exercise 2: Magazine Layout</h2>
+        <div class="magazine">
+    <header class="mag-header">
+        <h3>The Weekly Stitch</h3>
+        <p>News and ideas about handmade crafts</p>
+    </header>
+
+    <aside class="mag-sidebar">
+        <h4>Categories</h4>
+        <ul>
+            <li>Crochet</li>
+            <li>Knitting</li>
+            <li>Embroidery</li>
+        </ul>
+    </aside>
+
+    <section class="mag-content">
+        <h4>Getting Started with Crochet</h4>
+        <p>Crochet turns a single strand of yarn into scarves, bags and blankets using just a hook and a few basic stitches. The chain stitch comes first, because every project begins with a row of them.</p>
+        <p>Beginners usually start with a medium-weight yarn and a 5mm hook. Light colors make it easier to see each stitch. Practice a simple square before you move on to bigger pieces, and be patient, because every crocheter's first rows look uneven.</p>
+    </section>
+
+    <footer class="mag-footer">
+        <p>&copy; 2026 The Weekly Stitch</p>
+    </footer>
+</div>
     </main>
 </body>
 </html>

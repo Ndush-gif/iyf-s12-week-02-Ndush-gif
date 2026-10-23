@@ -106,3 +106,40 @@ button:hover {
     font-size: var(--font-xl);
     font-weight: 700;
 }
+/* Projects grid - mobile first */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.project-card {
+    padding: 1.5rem;
+    border: 1px solid var(--color-muted);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.project-card h2 {
+    font-size: var(--font-xl);
+}
+
+.project-card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
