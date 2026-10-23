@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Grid Practice</h1>
+
+        <h2>Exercise 1: Photo Gallery</h2>
+        <div class="gallery">
+            <img src="https://placehold.co/400x300?text=Image+1" alt="Gallery placeholder 1">
+            <img src="https://placehold.co/400x300?text=Image+2" alt="Gallery placeholder 2">
+            <img src="https://placehold.co/400x300?text=Image+3" alt="Gallery placeholder 3">
+            <img src="https://placehold.co/400x300?text=Image+4" alt="Gallery placeholder 4">
+            <img src="https://placehold.co/400x300?text=Image+5" alt="Gallery placeholder 5">
+            <img src="https://placehold.co/400x300?text=Image+6" alt="Gallery placeholder 6">
+        </div>
+    </main>
+</body>
+</html>
