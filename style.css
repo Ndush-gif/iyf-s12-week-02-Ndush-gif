@@ -77,19 +77,14 @@ button {
 button:hover {
     background-color: var(--color-primary-dark);
 }
-/* Navigation bar */
+/* Navigation - mobile first */
 .navbar {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
     background-color: var(--color-primary-dark);
-}
-
-.nav-links {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
 }
 
 .navbar a {
@@ -106,6 +101,55 @@ button:hover {
     font-size: var(--font-xl);
     font-weight: 700;
 }
+
+/* The checkbox stays in the page for keyboard users, but is invisible */
+.menu-toggle {
+    position: absolute;
+    opacity: 0;
+}
+
+.menu-toggle:focus-visible + .menu-button {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+.menu-button {
+    color: white;
+    font-size: 1.75rem;
+    line-height: 1;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}
+
+/* Phone: links hidden until the checkbox is ticked */
+.nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    list-style: none;
+}
+
+.menu-toggle:checked ~ .nav-links {
+    display: flex;
+}
+
+/* Tablet and up: horizontal menu, no hamburger */
+@media (min-width: 768px) {
+    .menu-button {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        margin-top: 0;
+        gap: 1.5rem;
+    }
+}
+
 /* Projects grid - mobile first */
 .projects-grid {
     display: grid;
