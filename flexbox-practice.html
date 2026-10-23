@@ -22,6 +22,47 @@
             border-radius: 8px;
             background-color: white;
         }
+        .site-footer {
+    margin-top: 2rem;
+    padding: 2rem 1.5rem 1rem;
+    background-color: var(--color-primary-dark);
+    color: white;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+}
+
+.footer-column h3 {
+    color: white;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.site-footer a {
+    color: white;
+}
+
+.site-footer a:hover {
+    color: var(--color-primary-light);
+}
+
+.footer-copyright {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-primary-light);
+    text-align: center;
+    font-size: var(--font-sm);
+}
     </style>
 </head>
 <body>
@@ -41,8 +82,30 @@
             <div class="flex-card">
                 <h3>Reading</h3>
                 <p>I like learning new things from books.</p>
-            </div>
         </div>
+         <footer class="site-footer">
+    <div class="footer-columns">
+        <div class="footer-column">
+            <h3>About</h3>
+            <p>Catherine Nduku. I'm learning web development and building my portfolio.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Contact</h3>
+            <p>Email: ndukucatherine211@gmail.com</p>
+            <p>Nairobi, Kenya</p>
+        </div>
+    </div>
+    <p class="footer-copyright">&copy; 2026 Catherine Nduku. All rights reserved.</p>
+</footer>
     </main>
 </body>
 </html>
