@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Catherine Nduku</title>
+    <title>Home - Catherine Nduku</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
@@ -16,76 +16,42 @@
             <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
             <label for="menu-toggle" class="menu-button" aria-hidden="true">&#9776;</label>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html" aria-current="page">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <h1>Catherine Nduku</h1>
     </header>
 
     <main>
-        <h1>Contact Me</h1>
-        <p>Feel free to reach out to me using the form below:</p>
+        <section class="hero">
+            <div class="hero-text">
+                <h2>About Me</h2>
+                <p>Hello, I'm Catherine Nduku! I love to create interactive and visually appealing websites.</p>
+            </div>
+            <img src="https://placehold.co/300x300" alt="placeholder profile photo" width="300" height="300">
+        </section>
 
-        <div class="contact-layout">
-            <form class="contact-form" action="#" method="post">
-                <fieldset>
-                    <legend>Contact Form</legend>
-                    <p>
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-                    </p>
-                    <p>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="You@example.com" required>
-                    </p>
-                    <p>
-                        <label for="phone">Phone (optional):</label>
-                        <input type="tel" id="phone" name="phone" placeholder="e.g. 07912 345 678">
-                    </p>
-                </fieldset>
+        <section>
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>Crocheting</li>
+                <li>Traveling</li>
+                <li>Learning</li>
+            </ul>
+        </section>
 
-                <fieldset>
-                    <legend>Message</legend>
-                    <p>
-                        <label for="subject">Subject:</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">--Please choose an option--</option>
-                            <option value="general">General Inquiry</option>
-                            <option value="support">Support Request</option>
-                            <option value="feedback">Feedback</option>
-                        </select>
-                    </p>
-                    <p>
-                        <label for="message">Your Message:</label>
-                        <textarea id="message" name="message" rows="5" cols="40" placeholder="Write your Message here (at least 50 characters)" required></textarea>
-                    </p>
-                    <p>
-                        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
-                        <label for="newsletter" class="inline-label">Subscribe to our newsletter</label>
-                    </p>
-                </fieldset>
+        <section>
+            <h2>Link to My Favorite Website</h2>
+            <p><a href="https://ehub.alxafrica.com" target="_blank" rel="noopener noreferrer">ALX Africa eHub</a></p>
+        </section>
 
-                <button type="submit">Submit</button>
-            </form>
-
-            <aside class="contact-sidebar">
-                <section>
-                    <h2>Find Me Online</h2>
-                    <ul>
-                        <li><a href="https://github.com/Ndush-gif" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-                        <li><a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-                    </ul>
-                    <p>Email: <a href="mailto:ndukucatherine211@gmail.com">ndukucatherine211@gmail.com</a></p>
-                </section>
-
-                <section>
-                    <h2>Location</h2>
-                    <p>Based in Nairobi, Kenya (East Africa Time, UTC+3).</p>
-                </section>
-            </aside>
-        </div>
+        <section>
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:ndukucatherine211@gmail.com">ndukucatherine211@gmail.com</a></p>
+        </section>
     </main>
 
     <footer>
