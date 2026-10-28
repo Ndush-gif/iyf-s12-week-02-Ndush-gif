@@ -51,7 +51,7 @@ This week I took my Week 1 HTML portfolio and styled it into a responsive websit
 ## Screenshots (optional)
 Add screenshots of the site at phone and desktop widths here, for example:
 
-![Home page on desktop](images/Screenshots/week2-home-desktop.png)
+![Card Component](images/Screenshots/card-component.JPG)
 
 ## Live Demo
 [View Live Demo](https://ndush-gif.github.io/iyf-s12-week-02-Ndush-gif/)
