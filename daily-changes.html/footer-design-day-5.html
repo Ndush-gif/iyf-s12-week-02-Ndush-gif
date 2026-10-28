@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5: Footer Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* Page setup: footer sits at the bottom, full width */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 0;
+        }
+
+        main {
+            flex: 1;
+            width: 100%;
+            max-width: none;
+            padding: 1.5rem;
+        }
+
+        /* Footer */
+        .page-footer {
+            padding: 2.5rem 1.5rem 1.5rem;
+            background-color: var(--color-primary-dark);
+            color: white;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Mobile first: 1 column */
+        .footer-columns {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .footer-column h2 {
+            margin-bottom: 0.75rem;
+            color: white;
+            font-size: var(--font-lg);
+        }
+
+        .footer-column ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.5rem;
+        }
+
+        .page-footer a {
+            color: white;
+        }
+
+        .page-footer a:hover {
+            color: var(--color-primary-light);
+        }
+
+        .page-footer a:focus {
+            outline-color: white;
+        }
+
+        /* Copyright row */
+        .footer-bottom {
+            grid-column: 1 / -1;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--color-primary-light);
+            text-align: center;
+            font-size: var(--font-sm);
+        }
+
+        .footer-bottom p {
+            margin-bottom: 0;
+        }
+
+        /* Tablet: 2 columns */
+        @media (min-width: 768px) {
+            .footer-columns {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Desktop: 4 columns */
+        @media (min-width: 1024px) {
+            .footer-columns {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Day 5: Footer Design</h1>
+        <p>Eish, its day 5 and I'm excited reaching this far</p>
+    </main>
+
+    <footer class="page-footer">
+        <div class="footer-inner">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h2>Catherine Nduku</h2>
+                    <p>Learning web development and building a portfolio, one lesson at a time.</p>
+                </div>
+
+                <nav class="footer-column" aria-label="Footer navigation">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-column">
+                    <h2>My Interests</h2>
+                    <ul>
+                        <li>Crocheting</li>
+                        <li>Traveling</li>
+                        <li>Learning</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h2>Connect</h2>
+                    <ul>
+                        <li><a href="https://github.com/Ndush-gif" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">🐙</span> GitHub</a></li>
+                        <li><a href="mailto:ndukucatherine211@gmail.com"><span aria-hidden="true">📧</span> Email</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2026 Catherine Nduku. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

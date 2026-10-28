@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3: Hero Section</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        /* This page needs the hero to touch the screen edges */
+        body {
+            padding: 0;
+        }
+
+        main {
+            max-width: none;
+        }
+
+        .hero-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            min-height: 100svh;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            color: white;
+            background-color: var(--color-primary-dark);
+            background-image:
+                linear-gradient(rgba(30, 16, 20, 0.6), rgba(30, 16, 20, 0.6)),
+                url("https://placehold.co/1600x900");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-section h1 {
+            margin-bottom: 1rem;
+            color: white;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+        }
+
+        .hero-section p {
+            max-width: 40rem;
+            margin-bottom: 2rem;
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+        }
+
+        .hero-button {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            border-radius: 6px;
+            background-color: white;
+            color: var(--color-primary-dark);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .hero-button:hover {
+            background-color: var(--color-primary-light);
+            color: var(--color-text);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section class="hero-section">
+            <h1>Hi, I'm Catherine</h1>
+            <p>I'm learning web development and building a portfolio that looks good on every screen, one lesson at a time.</p>
+            <a href="../projects.html" class="hero-button">View My Work</a>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4: Form Styling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .styled-form {
+            max-width: 40rem;
+            margin: 0 auto;
+            padding: 1.5rem;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .styled-form label {
+            display: block;
+            margin-bottom: 0.375rem;
+            font-weight: 600;
+        }
+
+        /* Custom input styles */
+        .styled-form input[type="text"],
+        .styled-form input[type="email"],
+        .styled-form input[type="tel"],
+        .styled-form select,
+        .styled-form textarea {
+            width: 100%;
+            min-height: 44px;
+            padding: 0.65rem 0.875rem;
+            border: 2px solid #C9C9D1;
+            border-radius: 8px;
+            background-color: white;
+            color: var(--color-text);
+            font-family: inherit;
+            font-size: var(--font-base);
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .styled-form textarea {
+            min-height: 8rem;
+            resize: vertical;
+        }
+
+        .styled-form ::placeholder {
+            color: #6B6B76;
+        }
+
+        /* Focus states */
+        .styled-form input:focus,
+        .styled-form select:focus,
+        .styled-form textarea:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(122, 31, 168, 0.25);
+            outline: 2px solid transparent;
+        }
+
+        /* Error states: only after the person has typed or interacted */
+        .styled-form input:not(:placeholder-shown):invalid,
+        .styled-form textarea:not(:placeholder-shown):invalid,
+        .styled-form select:user-invalid {
+            border-color: #C62828;
+            background-color: #FFF5F5;
+        }
+
+        /* Valid state */
+        .styled-form input:not(:placeholder-shown):valid,
+        .styled-form textarea:not(:placeholder-shown):valid {
+            border-color: #2E7D32;
+        }
+
+        /* Error messages are hidden until their field is invalid */
+        .error-message {
+            display: none;
+            margin-top: 0.375rem;
+            color: #C62828;
+            font-size: var(--font-sm);
+        }
+
+        .styled-form input:not(:placeholder-shown):invalid + .error-message,
+        .styled-form textarea:not(:placeholder-shown):invalid + .error-message,
+        .styled-form select:user-invalid + .error-message {
+            display: block;
+        }
+
+        /* Checkbox */
+        .checkbox-group label {
+            display: inline;
+            font-weight: 400;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-right: 0.5rem;
+            vertical-align: middle;
+            accent-color: var(--color-primary);
+        }
+
+        /* Submit button */
+        .submit-button {
+            width: 100%;
+            min-height: 48px;
+            padding: 0.75rem 1.5rem;
+            font-family: inherit;
+            font-size: var(--font-base);
+            font-weight: 600;
+        }
+
+        /* Tablet and up */
+        @media (min-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .submit-button {
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Day 4: Form Styling</h1>
+
+        <form class="styled-form" action="#" method="post">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" required minlength="2">
+                    <span class="error-message">Please enter your name (at least 2 characters).</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    <span class="error-message">Please enter a valid email address, like you@example.com.</span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone (optional)</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g. 0712 345 678" pattern="[0-9+ ]{9,15}">
+                <span class="error-message">Use only numbers, spaces or +, between 9 and 15 characters.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Support Request</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+                <span class="error-message">Please choose a subject.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here (at least 50 characters)" required minlength="50"></textarea>
+                <span class="error-message">Your message needs at least 50 characters.</span>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+                <label for="newsletter">Subscribe to our newsletter</label>
+            </div>
+
+            <button type="submit" class="submit-button">Send message</button>
+        </form>
+    </main>
+</body>
+</html>

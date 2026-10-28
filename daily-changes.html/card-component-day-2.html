@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2: Card Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid #D9D9D9;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .feature-card img {
+            display: block;
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .feature-card-body {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 1.25rem;
+        }
+
+        .feature-card-title {
+            margin-bottom: 0.5rem;
+            font-size: var(--font-xl);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+            padding: 0;
+            list-style: none;
+        }
+
+        .tag {
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            background-color: var(--color-primary-light);
+            color: var(--color-primary-dark);
+            font-size: var(--font-sm);
+            font-weight: 600;
+        }
+
+        .feature-card button {
+            margin-top: auto;
+            padding: 0.75rem 1.5rem;
+            font-family: inherit;
+            font-size: var(--font-base);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Day 2: Card Component</h1>
+
+        <div class="card-grid">
+            <article class="feature-card">
+                <img src="https://placehold.co/400x200?text=Crochet" alt="Placeholder image for crocheting">
+                <div class="feature-card-body">
+                    <h2 class="feature-card-title">Crocheting</h2>
+                    <p>I make handmade pieces to relax and practice patience.</p>
+                    <ul class="tags">
+                        <li class="tag">Craft</li>
+                        <li class="tag">Handmade</li>
+                    </ul>
+                    <button>Read more</button>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <img src="https://placehold.co/400x200?text=Web+Dev" alt="Placeholder image for web development">
+                <div class="feature-card-body">
+                    <h2 class="feature-card-title">Web Development</h2>
+                    <p>I'm learning HTML and CSS to build my own portfolio website, one lesson at a time. Every week I add something new.</p>
+                    <ul class="tags">
+                        <li class="tag">HTML</li>
+                        <li class="tag">CSS</li>
+                        <li class="tag">Learning</li>
+                    </ul>
+                    <button>Read more</button>
+                </div>
+            </article>
+
+            <article class="feature-card">
+                <img src="https://placehold.co/400x200?text=Travel" alt="Placeholder image for travelling">
+                <div class="feature-card-body">
+                    <h2 class="feature-card-title">Travelling</h2>
+                    <p>I enjoy seeing new places.</p>
+                    <ul class="tags">
+                        <li class="tag">Adventure</li>
+                        <li class="tag">Culture</li>
+                    </ul>
+                    <button>Read more</button>
+                </div>
+            </article>
+        </div>
+    </main>
+</body>
+</html>
