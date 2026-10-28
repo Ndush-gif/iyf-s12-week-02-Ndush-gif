@@ -48,10 +48,6 @@ This week I took my Week 1 HTML portfolio and styled it into a responsive websit
 - I pasted the contact page code into `index.html` by mistake, so my home page showed the contact form. I fixed it by replacing the file with the correct home page code.
 - My new navigation styles did nothing at first because they had not been saved to `style.css`, and DevTools showed me the rules were missing.
 
-## Screenshots (optional)
-Add screenshots of the site at phone and desktop widths here, for example:
-
-![Card Component](images/Screenshots/card-component.JPG)
 
 ## Live Demo
 [View Live Demo](https://ndush-gif.github.io/iyf-s12-week-02-Ndush-gif/)
