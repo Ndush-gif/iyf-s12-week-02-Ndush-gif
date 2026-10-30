@@ -26,7 +26,7 @@ This week I took my Week 1 HTML portfolio and styled it into a responsive websit
 - A Contact page with a full-width form on mobile and a form with a sidebar on desktop
 - Hover states, smooth transitions and visible focus outlines for keyboard users
 - Practice pages: `box-model-practice.html`, `flexbox-practice.html` and `grid-practice.html`
-- Five daily challenges in the `daily-challenges` folder: `button-styles.html`, `card-component.html`, `hero-section.html`, `form-styling.html` and `footer-design.html`
+- Five daily challenges in the `daily-challenges` folder: `button-styles-day-1.html`, `card-component-day-2.html`, `hero-section-day-3.html`, `form-styling-day-4.html` and `footer-design-day-5.html`
 
 ## How to Run
 1. Clone this repository
